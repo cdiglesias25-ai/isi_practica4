@@ -225,45 +225,78 @@ Los apartados 6.1 y 6.2 corresponden a las descripciones detalladas de UC-05 y U
 
 **Identificador y nombre del caso de uso:** [Indica el caso.]
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:** Acta UC-05, §1. Permitir que una persona usuaria registrada consulte y modifique sus propios datos personales, datos de contacto y preferencias dietéticas, y guarde los cambios para que queden actualizados en su perfil.
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** Acta UC-05, §1.Actor principal: Persona usuaria registrada. Actores de apoyo: Sistema del Proyecto Simbiosis, que permite consultar, validar y guardar los datos del perfil.
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** Acta UC-05, §2. El usuario tiene una cuenta activa, ha iniciado sesión y desea actualizar su propio perfil.
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** Acta UC-05, §2. El usuario accede a la opción de actualizar su perfil.
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:** Acta UC-05, §2. El perfil queda actualizado con los nuevos valores guardados.
 
-**Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
+**Extensiones (flujos alternativos):** Acta UC-05, §2.
 
-**Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
+**Postcondiciones:** Acta UC-05, §2.
 
-**Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
+**Reglas y NFR pertinentes:** Acta UC-05, §2. El acta no identifica requisitos no funcionales específicos. No deben inventarse referencias a rendimiento, seguridad, disponibilidad o usabilidad que no estén respaldadas por las fuentes.
 
-**Preguntas abiertas:** [Registra solo las cuestiones necesarias que las fuentes no resuelvan. Si no hay preguntas para el alcance descrito, indícalo.]
+**Preguntas abiertas:** Acta UC-05, §2.
 
 ### 6.2 Descripción detallada UC-21 — Buscar recetas
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:** Acta de acuerdos de UC-21 · Buscar recetas
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:** Acta UC-021, §2. El participante quiere localizar una receta que cumpla sus criterios y consultar su detalle.
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** Acta UC-021, §2. Usuario registrado como actor principal
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** Acta UC-021, §2. El usuario dispone de una sesión iniciada. El sistema dispone de recetas publicadas
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** Acta UC-021, §2. El usuario accede a la búsqueda de recetas para localizar una receta según uno o varios criterios
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:** Acta UC-021, §2. El usuario encuentra recetas que cumplen los criterios y puede consultar el detalle de una de ellas.
 
-**Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
+**Extensiones (flujos alternativos):** Acta UC-021, §2. 
+7a. No se indica ningún criterio:
+-El sistema solicita que se indique al menos un criterio.
+-El sistema conserva la búsqueda sin ejecutarla.
+-El usuario introduce uno o varios criterios.
+7b. Conflicto entre ingredientes incluidos y excluidos:
+-El sistema identifica el ingrediente seleccionado para incluir y excluir simultáneamente.
+-El sistema informa del conflicto y no ejecuta la búsqueda.
+-El usuario corrige la selección.
+7c. La búsqueda no devuelve resultados:
+-El sistema informa de que no hay resultados para los criterios indicados.
+-El sistema conserva los criterios de búsqueda.
+-Si existe una posible corrección ortográfica, el sistema propone esa corrección. En caso contrario, ofrece alternativas relacionadas cuando están disponibles; si no hay sugerencias, lo indica.
+-El sistema muestra las sugerencias separadas de los resultados, sin presentarlas como coincidencias de la búsqueda original.
+-El sistema conserva los ingredientes excluidos en las sugerencias y no propone eliminarlos para obtener resultados.
+-El usuario puede modificar los criterios, aceptar una propuesta para revisar los criterios sugeridos y decidir si ejecuta otra búsqueda, o terminar la consulta.
+7d. El usuario modifica los criterios:
+-El usuario añade, retira o modifica los criterios de búsqueda.
+-El usuario ejecuta una nueva búsqueda.
+7e. Fallo al realizar la búsqueda:
+-El sistema informa de que no ha podido completar la búsqueda.
+-El sistema no presenta el fallo como una búsqueda sin resultados.
+-El sistema conserva los criterios de la última búsqueda.
 
-**Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
+**Postcondiciones:** Acta UC-021, §2. En caso de éxito:
+                                      -Se muestran las recetas publicadas y validadas que cumplen todos los criterios
+                                      -Se muestran sugerencias separadas de los resultados. No se presentan como recetas que cumplen la búsqueda original.
+                                      -Las sugerencias conservan los ingredientes excluidos.
+                                      En caso de búsqueda sin resultados:
+                                      -Se informa al usuario de que no hay recetas que encajen con los criterios seleccionados.
+                                      - Se conservan los criterios para que el usuario pueda modificarlos.
+                                      En caso de ausencia de criterios:
+                                      -La búsqueda no se ejecuta hasta que el usuario introduzca al menos un criterio
+                                      En caso de fallo:
+                                      -Se informa al usuario del error. 
+                                      -El usuario puede reintentar su búsqueda.
 
-**Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
+**Reglas y NFR pertinentes:** Acta UC-021, §2. Las fuentes proporcionadas no identifican requisitos no funcionales específicos para este caso de uso. Por tanto, no corresponde inventar referencias adicionales.
 
-**Preguntas abiertas:** [Registra solo las cuestiones necesarias que las fuentes no resuelvan. Si no hay preguntas para el alcance descrito, indícalo.]
+**Preguntas abiertas:** Acta UC-021, §2
 
 ## 7 Continuidad entre iteraciones
 
