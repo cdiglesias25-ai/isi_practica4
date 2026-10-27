@@ -15,7 +15,7 @@
 
 ## Épica de búsqueda
 
-Como [rol], quiero [capacidad amplia], para [beneficio].
+Como persona usuaria, quiero buscar recetas mediante palabras o frases, especificando ingredientes que deseo incluir o excluir, para encontrar recetas que se ajusten a mis necesidades.
 
 **Estado:** descompuesta en US-01, US-02 y US-03. Conserva la necesidad conjunta.
 
