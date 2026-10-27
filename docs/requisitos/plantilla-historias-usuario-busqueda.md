@@ -27,21 +27,21 @@ Como persona usuaria, quiero buscar recetas mediante palabras o frases, especifi
 
 **Título:** [Capacidad]
 
-Como [rol], quiero [capacidad], para [beneficio].
+Como persona usuaria, quiero buscar recetas introduciendo una palabra o frase, para encontrar platos relacionados con lo que deseo preparar y ajustados a mis criterios.
 
 **Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
 
 ### Criterios de aceptación
 
-- **CA-01.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-02.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-03.** Dado [situación], cuando [acción], entonces [resultado observable].
+- **CA-01.** Dado que existen recetas en estado publicado y validado, cuando la persona introduce una palabra o frase y ejecuta la búsqueda, entonces el sistema muestra las recetas cuyo título o descripción breve contiene todas las palabras de la búsqueda, independientemente de su orden, de las mayúsculas y de las tildes.
+- **CA-02.** Dado que la búsqueda devuelve una o más recetas, cuando se presenta la lista de resultados, entonces cada resultado muestra el título y la descripción breve de la receta.
+- **CA-03.** Dado que la búsqueda devuelve varias recetas, cuando se presenta la lista de resultados, entonces las recetas aparecen ordenadas por fecha de publicación, de la más reciente a la más antigua.
 
 ## US-02
 
 **Título:** [Capacidad]
 
-Como [rol], quiero [capacidad], para [beneficio].
+Como persona usuaria, quiero seleccionar los ingredientes que tengo disponibles para encontrar recetas que pueda preparar con ellos.
 
 **Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
 
